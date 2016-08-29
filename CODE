@@ -1,0 +1,88 @@
+package com.company;
+import java.util.Scanner;
+import java.util.Random;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Randomly choose a number 1-100 (type it in).");
+            int number = input.nextInt();
+            System.out.println();
+            Random randomGenerator = new Random();
+
+            for (int i = 1; i <= 1; ++i) {
+                int random = randomGenerator.nextInt(100);
+
+                System.out.println("I guess " + random + ".");
+                System.out.println();
+                System.out.println("If your number is the same as mine, say '1', if your number is lower, say '0', if your number is higher, say '2!'.");
+
+                int info = input.nextInt();
+                if(info == 1)
+                {
+                    System.out.println();
+                    System.out.println("YAY!");
+                }
+                else if(info ==  0) {
+                    for (int k = random; k >= 1; --k) {
+                        int random2 = randomGenerator.nextInt(100);
+                        System.out.println();
+                        System.out.println("Then maybe it is " + random2 + "?");
+                        System.out.println();
+                        System.out.println("If your number is the same as mine, say '1', if your number is lower, say '0', if your number is higher, say '2!'.");
+
+                        int info2 = input.nextInt();
+                        if(info2 == 1)
+                        {
+                            System.out.println();
+                            System.out.println("YAY!");
+                            break;
+                        }
+                        else if(info2 == 0){
+                            System.out.println();
+                            System.out.println("Darn it's lower...well I give up you win. :)");
+                            break;
+                        }
+                        else if(info2 == 2){
+                            System.out.println();
+                            System.out.println("Darn it's higher...well I give up you win. :)");
+                            break;
+                        }
+                        break;
+                    }
+                }
+                else if(info == 2)
+                    {
+                        for (int k = random; k >= 1; ++k) {
+                            int random2 = randomGenerator.nextInt(100);
+                            System.out.println();
+                            System.out.println("Then maybe it is " + random2 + "?");
+                            System.out.println();
+                            System.out.println("If your number is the same as mine, say '1', if your number is lower, say '0', if your number is higher, say '2!'.");
+
+                            int info3 = input.nextInt();
+                            if(info3 == 1)
+                            {
+                                System.out.println();
+                                System.out.println("YAY!");
+                                break;
+                            }
+                            else if(info3 == 0){
+                                System.out.println();
+                                System.out.println("Darn it's lower...well I give up you win. :)");
+                                break;
+                            }
+                            else if(info3 == 2){
+                                System.out.println();
+                                System.out.println("Darn it's higher...well I give up you win. :)");
+                            break;
+                        }
+                    }
+
+
+
+        }
+        break;
+    }
+}}
